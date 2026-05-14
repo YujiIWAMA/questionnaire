@@ -394,7 +394,7 @@
   const FORM_URL = 'https://forms.gle/MMY6FExAMTM3yGQPA';
 
   // 2. 「受付番号」フィールドのentry ID（ページソースから取得）
-  const ENTRY_ID = 'entry.1971921321';
+  const ENTRY_ID = '1971921321';
 
   // ============================================================
 
@@ -414,7 +414,7 @@
     document.getElementById('random-id').textContent = id;
 
     // FormのURLにIDをパラメータとして埋め込む
-    const link = FORM_URL + 'https://forms.gle/MMY6FExAMTM3yGQPA' + entry.1971921321 + '=' + encodeURIComponent(id);
+    const link = FORM_URL + 'https://forms.gle/MMY6FExAMTM3yGQPA' + 1971921321 + '=' + encodeURIComponent(id);
     document.getElementById('form-link').href = link;
 
     // チェックボックスの状態監視
