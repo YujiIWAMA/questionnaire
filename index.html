@@ -424,7 +424,7 @@
   // 8桁ランダムID生成（紛らわしい文字 0/O/1/I/L を除外）
   function generateID() {
     const chars = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
-    let id = 'R-';
+    let id = '';
     for (let i = 0; i < 8; i++) {
       id += chars.charAt(Math.floor(Math.random() * chars.length));
     }
