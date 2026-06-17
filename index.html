@@ -437,7 +437,7 @@
     document.getElementById('random-id').textContent = id;
 
     // FormのURLにIDをパラメータとして埋め込む
-    const link = FORM_URL + '?' + ENTRY_ID + '=' + encodeURIComponent(id);
+    const link = FORM_URL + '?usp=pp_url&' + ENTRY_ID + '=' + encodeURIComponent(id);
     document.getElementById('form-link').href = link;
 
     // チェックボックスの状態監視
