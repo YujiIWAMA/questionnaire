@@ -390,7 +390,7 @@
           研究への参加は自由であり、いつでも撤回できること（ただし受付番号が必要）を理解しました。
         </label>
         <label>
-          <input type="checkbox" id="chk3">
+          <input type="checkbox" id="chk4">
           研究参加に同意します。
         </label>
       </div>
@@ -441,7 +441,7 @@
     document.getElementById('form-link').href = link;
 
     // チェックボックスの状態監視
-    ['chk1','chk2','chk3'].forEach(function(chkId) {
+    ['chk1','chk2','chk3','chk4'].forEach(function(chkId) {
       document.getElementById(chkId).addEventListener('change', updateButton);
     });
   });
