@@ -272,6 +272,7 @@
         <p>① この説明文書をお読みいただき、研究内容をご確認ください。</p>
         <p>② 下に表示される受付番号（8桁のランダムID）を必ずお控えください。</p>
         <p>③説明文書をお読みのうえ、4項目の確認にチェックを入れ、「アンケートに進む」ボタンを押して、ご回答ください。</p>
+        <p>④本調査への回答はお一人につき1回のみとします。複数回の回答はご遠慮ください。</p>
       </div>
       <p class="no-indent"><strong>研究期間：</strong>学校長承認日 ～ 2029年3月31日</p>
     </div>
@@ -391,6 +392,10 @@
         </label>
         <label>
           <input type="checkbox" id="chk4">
+          本調査への回答は今回のみであり、複数回回答しないことを確認します。
+        </label>
+        <label>
+          <input type="checkbox" id="chk5">
           研究参加に同意します。
         </label>
       </div>
@@ -441,7 +446,7 @@
     document.getElementById('form-link').href = link;
 
     // チェックボックスの状態監視
-    ['chk1','chk2','chk3','chk4'].forEach(function(chkId) {
+    ['chk1','chk2','chk3','chk4','chk5'].forEach(function(chkId) {
       document.getElementById(chkId).addEventListener('change', updateButton);
     });
   });
@@ -452,7 +457,8 @@
       document.getElementById('chk1').checked &&
       document.getElementById('chk2').checked &&
       document.getElementById('chk3').checked &&
-      document.getElementById('chk4').checked;
+      document.getElementById('chk4').checked &&
+      document.getElementById('chk5').checked;
 
     const btn = document.getElementById('form-link');
     if (allChecked) {
